@@ -22,9 +22,11 @@ function mergeSort(array) {
     let midpoint = array.length/2
     let firstHalf = array.slice(0, midpoint)
     let secondHalf = array.slice(midpoint, array.length)
-    if (array.length < 1) {
+    if (array.length < 2) {
         return array
     } else {
         return merge(mergeSort(firstHalf), mergeSort(secondHalf))
     }
 }
+
+console.log(mergeSort([-1, 2, -4, 5, 90, 19, 11, 47, 42]))
